@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets (API keys)
+.env
+
+# Generated data - can be rebuilt with the ingest script
+data/processed/
+data/index/
+
+# Local databases
+*.db
+
+# OS / editor files
+.DS_Store
+.vscode/
+
+# Personal AI assistant instructions
+CLAUDE.md
