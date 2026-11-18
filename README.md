@@ -14,6 +14,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Ingest the handbook
+
+Reads every file listed in `data/raw/manifest.json`, parses and cleans it, and writes
+one document per line to `data/processed/documents.jsonl` (generated, not committed).
+
+```bash
+python -m scripts.ingest
+```
+
 ## Run the tests
 
 ```bash
