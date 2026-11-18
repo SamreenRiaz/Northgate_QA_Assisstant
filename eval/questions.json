@@ -1,0 +1,552 @@
+[
+  {
+    "id": "vpn-sessions",
+    "category": "lookup",
+    "question": "How many VPN sessions can I have open at the same time?",
+    "answerable": true,
+    "expected_docs": ["it-vpn-guide"],
+    "must_contain": ["2|two"],
+    "must_not_contain": [],
+    "expected_answer": "At most 2 concurrent VPN sessions; a further device is refused."
+  },
+  {
+    "id": "password-length",
+    "category": "lookup",
+    "question": "What is the minimum length for a password?",
+    "answerable": true,
+    "expected_docs": ["it-password-policy"],
+    "must_contain": ["16"],
+    "must_not_contain": [],
+    "expected_answer": "At least 16 characters; passphrases are encouraged."
+  },
+  {
+    "id": "remote-days",
+    "category": "lookup",
+    "question": "How many days a week can I work from home?",
+    "answerable": true,
+    "expected_docs": ["hr-remote-work-policy"],
+    "must_contain": ["2|two"],
+    "must_not_contain": [],
+    "expected_answer": "Up to 2 days per week by default, after the introductory period. Teams running hardware labs set their own in-office days."
+  },
+  {
+    "id": "work-abroad",
+    "category": "lookup",
+    "question": "Can I work remotely from another country for a month?",
+    "answerable": true,
+    "expected_docs": ["hr-remote-work-policy", "ref-faq"],
+    "must_contain": ["not"],
+    "must_not_contain": [],
+    "expected_answer": "No. Working from outside the United States is not supported."
+  },
+  {
+    "id": "resignation-notice",
+    "category": "lookup",
+    "question": "How much notice should I give when I resign?",
+    "answerable": true,
+    "expected_docs": ["hr-notice-and-exit"],
+    "must_contain": ["4|four"],
+    "must_not_contain": [],
+    "expected_answer": "4 weeks' notice; one week is enough during the introductory period."
+  },
+  {
+    "id": "probation-length",
+    "category": "lookup",
+    "question": "How long is the probation period for new hires?",
+    "answerable": true,
+    "expected_docs": ["hr-probation-policy"],
+    "must_contain": ["6|six"],
+    "must_not_contain": [],
+    "expected_answer": "6 months from the start date (the introductory period); it can be extended by up to three months."
+  },
+  {
+    "id": "referral-bonus",
+    "category": "lookup",
+    "question": "How much is the referral bonus if my referral is hired full-time?",
+    "answerable": true,
+    "expected_docs": ["hr-referral-policy", "notes-people-2026-06", "ref-benefits-overview"],
+    "must_contain": ["3,000|3000"],
+    "must_not_contain": [],
+    "expected_answer": "$3,000, paid after the hire completes 90 days of employment. Intern and contract referrals earn half."
+  },
+  {
+    "id": "log-retention",
+    "category": "lookup",
+    "question": "How long are application logs kept?",
+    "answerable": true,
+    "expected_docs": ["it-data-retention"],
+    "must_contain": ["365"],
+    "must_not_contain": [],
+    "expected_answer": "365 days, then deleted."
+  },
+  {
+    "id": "corporate-card-limit",
+    "category": "lookup",
+    "question": "What is the monthly limit on a corporate card?",
+    "answerable": true,
+    "expected_docs": ["fin-corporate-card"],
+    "must_contain": ["10,000|10000"],
+    "must_not_contain": [],
+    "expected_answer": "$10,000 per month."
+  },
+  {
+    "id": "hotel-boston",
+    "category": "table",
+    "question": "What's the most I can pay per night for a hotel in Boston?",
+    "answerable": true,
+    "expected_docs": ["hr-travel-policy"],
+    "must_contain": ["275"],
+    "must_not_contain": [],
+    "expected_answer": "$275 per night excluding taxes (Boston is a Tier 1 city). Source: Travel Policy 4.2 (a Word table)."
+  },
+  {
+    "id": "per-diem-l3-chicago",
+    "category": "table",
+    "question": "What is the daily per diem for an L3 employee travelling to Chicago?",
+    "answerable": true,
+    "expected_docs": ["fin-per-diem-table"],
+    "must_contain": ["75"],
+    "must_not_contain": [],
+    "expected_answer": "$75 per day (L3, Tier 2)."
+  },
+  {
+    "id": "per-diem-l5-sf",
+    "category": "table",
+    "question": "What per diem does an L5 get in San Francisco?",
+    "answerable": true,
+    "expected_docs": ["fin-per-diem-table"],
+    "must_contain": ["110"],
+    "must_not_contain": [],
+    "expected_answer": "$110 per day (L5, Tier 1)."
+  },
+  {
+    "id": "conference-approval-limit",
+    "category": "table",
+    "question": "Up to what amount can my direct manager approve conference attendance?",
+    "answerable": true,
+    "expected_docs": ["fin-approval-matrix", "hr-training-policy"],
+    "must_contain": ["3,000|3000"],
+    "must_not_contain": [],
+    "expected_answer": "$3,000 (the annual training and conference budget); above that it is a department head decision."
+  },
+  {
+    "id": "payments-rto",
+    "category": "table",
+    "question": "What is the RTO for the payments service?",
+    "answerable": true,
+    "expected_docs": ["eng-disaster-recovery"],
+    "must_contain": ["4 hours|four hours"],
+    "must_not_contain": [],
+    "expected_answer": "4 hours (RPO 5 minutes)."
+  },
+  {
+    "id": "orders-db-data-loss",
+    "category": "table",
+    "question": "How much data loss is acceptable for the orders database in a disaster?",
+    "answerable": true,
+    "expected_docs": ["eng-disaster-recovery"],
+    "must_contain": ["30 minutes"],
+    "must_not_contain": [],
+    "expected_answer": "30 minutes (the RPO); its RTO is 6 hours."
+  },
+  {
+    "id": "procurement-three-quotes",
+    "category": "format",
+    "question": "Above what amount do I need three quotes for a purchase?",
+    "answerable": true,
+    "expected_docs": ["fin-procurement-policy"],
+    "must_contain": ["40,000|40000"],
+    "must_not_contain": [],
+    "expected_answer": "Above $40,000. Purchases above $10,000 go through Procurement with a purchase order. Source: PDF."
+  },
+  {
+    "id": "vendor-onboarding-documents",
+    "category": "format",
+    "question": "What does a new vendor need before they can be onboarded?",
+    "answerable": true,
+    "expected_docs": ["fin-vendor-policy"],
+    "must_contain": ["W-9"],
+    "must_not_contain": [],
+    "expected_answer": "A signed agreement and a W-9, plus a Security team assessment if they handle customer data. Onboarded by Finance and Legal. Source: Word file."
+  },
+  {
+    "id": "status-page-publishers",
+    "category": "format",
+    "question": "Who is allowed to publish updates on the status page?",
+    "answerable": true,
+    "expected_docs": ["support-escalation"],
+    "must_contain": ["Support lead", "incident commander"],
+    "must_not_contain": [],
+    "expected_answer": "Only the Support lead and the incident commander. Engineers draft wording in the incident channel. Source: HTML."
+  },
+  {
+    "id": "sev2-acknowledge",
+    "category": "format",
+    "question": "How quickly must a SEV2 incident be acknowledged?",
+    "answerable": true,
+    "expected_docs": ["eng-sev-definitions", "eng-oncall-runbook"],
+    "must_contain": ["45"],
+    "must_not_contain": [],
+    "expected_answer": "Within 45 minutes. Source: SEV Definitions (txt) and On-Call Runbook."
+  },
+  {
+    "id": "domestic-flight-max-fare",
+    "category": "format",
+    "question": "What is the maximum fare for a one-way domestic flight?",
+    "answerable": true,
+    "expected_docs": ["hr-travel-policy"],
+    "must_contain": ["450"],
+    "must_not_contain": [],
+    "expected_answer": "$450, economy class; the on-call manager may approve more for incident trips booked under 48 hours ahead. Source: Word file."
+  },
+  {
+    "id": "deploy-freeze-length",
+    "category": "conflict",
+    "question": "How long before a release does the deploy freeze start?",
+    "answerable": true,
+    "expected_docs": ["eng-deploy-runbook", "eng-release-calendar", "notes-allhands-2026-09"],
+    "must_contain": ["72"],
+    "must_not_contain": ["36"],
+    "expected_answer": "72 hours before every scheduled release. The deprecated 2023 runbook's 36 hours must not be used."
+  },
+  {
+    "id": "annual-leave-days",
+    "category": "conflict",
+    "question": "How many days of annual leave do full-time employees get per year?",
+    "answerable": true,
+    "expected_docs": ["hr-leave-policy-v2"],
+    "must_contain": ["16"],
+    "must_not_contain": ["12 days"],
+    "expected_answer": "16 days per calendar year (Leave Policy v2). v1's 12 days is superseded."
+  },
+  {
+    "id": "rollback-window",
+    "category": "conflict",
+    "question": "How long after a deploy can I use the one-click rollback?",
+    "answerable": true,
+    "expected_docs": ["eng-deploy-runbook", "notes-platform-2026-03"],
+    "must_contain": ["45"],
+    "must_not_contain": ["10 minutes"],
+    "expected_answer": "45 minutes after full rollout completes; after that, use the Rollback Procedure. The deprecated runbook's 10 minutes is outdated."
+  },
+  {
+    "id": "code-review-approvals",
+    "category": "conflict",
+    "question": "How many approving reviews does a change need before it goes to production?",
+    "answerable": true,
+    "expected_docs": ["eng-code-review", "eng-deploy-runbook"],
+    "must_contain": ["2|two"],
+    "must_not_contain": ["one approving"],
+    "expected_answer": "2 approving reviews from someone other than the author, plus a green CI pipeline. The deprecated runbook said one."
+  },
+  {
+    "id": "canary-stage",
+    "category": "conflict",
+    "question": "Do production deploys go through a canary stage, and for how long?",
+    "answerable": true,
+    "expected_docs": ["eng-deploy-runbook", "notes-platform-2026-03"],
+    "must_contain": ["ten minutes|10 minutes"],
+    "must_not_contain": ["straight to full rollout"],
+    "expected_answer": "Yes: 5 percent of traffic for ten minutes, then full rollout. The deprecated runbook went straight to full rollout."
+  },
+  {
+    "id": "secondary-caregiver-leave",
+    "category": "conflict",
+    "question": "How much paid leave does a secondary caregiver get?",
+    "answerable": true,
+    "expected_docs": ["hr-parental-leave-policy", "hr-parental-leave-policy-2027"],
+    "must_contain": ["12"],
+    "must_not_contain": [],
+    "expected_answer": "12 weeks fully paid today. From 2027-01-01 it rises to 26 weeks for births and adoptions on or after that date."
+  },
+  {
+    "id": "birth-parent-leave",
+    "category": "conflict",
+    "question": "How many weeks of leave does a birth parent get?",
+    "answerable": true,
+    "expected_docs": ["hr-parental-leave-policy", "hr-parental-leave-policy-2027"],
+    "must_contain": ["16"],
+    "must_not_contain": [],
+    "expected_answer": "16 weeks fully paid; unchanged in the 2027 revision."
+  },
+  {
+    "id": "voyagehub-trip-vp-approval",
+    "category": "conflict",
+    "question": "I booked a $3,200 business trip through VoyageHub. Does it need VP approval?",
+    "answerable": true,
+    "expected_docs": ["fin-expense-policy", "hr-travel-booking-guide"],
+    "must_contain": ["not"],
+    "must_not_contain": [],
+    "expected_answer": "No. Travel booked through VoyageHub is pre-approved at booking; it needs only manager sign-off (no VP approval), even though the approval matrix says VP above $2,500 for expense claims."
+  },
+  {
+    "id": "what-is-voyagehub",
+    "category": "codes-names",
+    "question": "What is VoyageHub?",
+    "answerable": true,
+    "expected_docs": ["hr-travel-policy", "hr-travel-booking-guide", "ref-faq"],
+    "must_contain": ["book"],
+    "must_not_contain": [],
+    "expected_answer": "The corporate booking tool; all flights, trains and hotels must be booked through it."
+  },
+  {
+    "id": "incident-bridge-extension",
+    "category": "codes-names",
+    "question": "What extension do I call for the incident phone bridge?",
+    "answerable": true,
+    "expected_docs": ["eng-oncall-runbook", "notes-allhands-2026-09"],
+    "must_contain": ["304"],
+    "must_not_contain": [],
+    "expected_answer": "Extension 304; it rings the secondary's and the manager's phones at the same time."
+  },
+  {
+    "id": "release-2026-23-date",
+    "category": "codes-names",
+    "question": "When is release 2026.23?",
+    "answerable": true,
+    "expected_docs": ["eng-release-calendar"],
+    "must_contain": ["2026-12-03|December 3"],
+    "must_not_contain": [],
+    "expected_answer": "2026-12-03, with the freeze starting 72 hours before. Owner: Maya Park."
+  },
+  {
+    "id": "security-lead-name",
+    "category": "codes-names",
+    "question": "Who is the Security Lead?",
+    "answerable": true,
+    "expected_docs": ["org-chart"],
+    "must_contain": ["Tyler Rodriguez"],
+    "must_not_contain": ["Tyler Martinez"],
+    "expected_answer": "Tyler Rodriguez, based in Austin."
+  },
+  {
+    "id": "maya-park-role",
+    "category": "codes-names",
+    "question": "What does Maya Park do?",
+    "answerable": true,
+    "expected_docs": ["org-chart", "team-product", "eng-release-calendar"],
+    "must_contain": ["Head of Product"],
+    "must_not_contain": [],
+    "expected_answer": "Head of Product (Denver); owns the release calendar."
+  },
+  {
+    "id": "secondary-oncall-stipend",
+    "category": "codes-names",
+    "question": "What is the on-call stipend for the secondary engineer?",
+    "answerable": true,
+    "expected_docs": ["eng-oncall-runbook"],
+    "must_contain": ["250"],
+    "must_not_contain": [],
+    "expected_answer": "$250 per week: half of the $500 primary stipend."
+  },
+  {
+    "id": "pir-meaning",
+    "category": "codes-names",
+    "question": "What does PIR stand for?",
+    "answerable": true,
+    "expected_docs": ["ref-glossary"],
+    "must_contain": ["Post-Incident Review"],
+    "must_not_contain": [],
+    "expected_answer": "Post-Incident Review: the blameless write-up after a SEV1 or SEV2."
+  },
+  {
+    "id": "stolen-laptop",
+    "category": "paraphrase",
+    "question": "Someone stole my work computer at the airport. What do I need to do?",
+    "answerable": true,
+    "expected_docs": ["it-laptop-policy", "it-incident-reporting"],
+    "must_contain": ["24 hours", "police"],
+    "must_not_contain": [],
+    "expected_answer": "Report it to IT and the Security team within 24 hours so it can be wiped remotely, and file a police report (needed for the insurance claim)."
+  },
+  {
+    "id": "clicked-phishing-link",
+    "category": "paraphrase",
+    "question": "I think I clicked a dodgy link in an email. What now?",
+    "answerable": true,
+    "expected_docs": ["it-incident-reporting"],
+    "must_contain": ["security@northgate.example|#security-incidents"],
+    "must_not_contain": [],
+    "expected_answer": "Report it immediately to security@northgate.example and post in #security-incidents; do not investigate yourself."
+  },
+  {
+    "id": "keep-home-desk",
+    "category": "paraphrase",
+    "question": "If I leave the company, do I have to give back the desk I bought with the home office money?",
+    "answerable": true,
+    "expected_docs": ["hr-wfh-equipment"],
+    "must_contain": ["stays with you|keep"],
+    "must_not_contain": [],
+    "expected_answer": "No. Equipment bought under the WFH allowance stays with you."
+  },
+  {
+    "id": "home-setup-money",
+    "category": "paraphrase",
+    "question": "Is there any money for setting up a workspace at home?",
+    "answerable": true,
+    "expected_docs": ["hr-wfh-equipment", "hr-remote-work-policy", "ref-benefits-overview"],
+    "must_contain": ["1,000|1000"],
+    "must_not_contain": [],
+    "expected_answer": "Yes: a one-time allowance of up to $1,000 after the introductory period, claimed through the expense system with receipts."
+  },
+  {
+    "id": "old-receipt",
+    "category": "paraphrase",
+    "question": "I forgot to submit a receipt from two months ago. Can I still get the money back?",
+    "answerable": true,
+    "expected_docs": ["fin-expense-policy"],
+    "must_contain": ["30 days"],
+    "must_not_contain": [],
+    "expected_answer": "No. Claims must be submitted within 30 days; expenses submitted more than 30 days late are not reimbursable."
+  },
+  {
+    "id": "l2-trip-to-denver",
+    "category": "multi-doc",
+    "question": "I'm an L2 travelling to Denver. What are my hotel cap and my daily per diem?",
+    "answerable": true,
+    "expected_docs": ["hr-travel-policy", "fin-per-diem-table"],
+    "must_contain": ["150", "50"],
+    "must_not_contain": [],
+    "expected_answer": "Denver is not listed, so it is Tier 3 ('any city not listed above'): hotel cap $150 per night, per diem $50 per day for L2."
+  },
+  {
+    "id": "platform-laptop-approver",
+    "category": "multi-doc",
+    "question": "I'm on the Platform team and my laptop broke. Who approves the replacement?",
+    "answerable": true,
+    "expected_docs": ["it-laptop-policy", "team-platform", "ref-faq"],
+    "must_contain": ["Maya Brooks"],
+    "must_not_contain": ["Maya Rivera", "Maya Park"],
+    "expected_answer": "Your team's engineering manager, Maya Brooks (Platform Team); IT does not approve replacements itself. IT then fulfils within 3 business days."
+  },
+  {
+    "id": "prod-db-access-approver",
+    "category": "multi-doc",
+    "question": "Whose sign-off do I need for production database access? Give me a name.",
+    "answerable": true,
+    "expected_docs": ["it-access-request", "org-chart"],
+    "must_contain": ["Tyler Rodriguez"],
+    "must_not_contain": [],
+    "expected_answer": "The system owner approves, and production database access also needs sign-off from the Security Lead, Tyler Rodriguez."
+  },
+  {
+    "id": "customer-credit-approver",
+    "category": "multi-doc",
+    "question": "Who approves service credits for customers after an outage?",
+    "answerable": true,
+    "expected_docs": ["support-escalation", "org-chart", "team-product"],
+    "must_contain": ["Head of Product|Maya Park"],
+    "must_not_contain": [],
+    "expected_answer": "The Head of Product (Maya Park); Finance processes them."
+  },
+  {
+    "id": "orders-db-team-manager",
+    "category": "multi-doc",
+    "question": "Who is the engineering manager of the team that owns the orders database?",
+    "answerable": true,
+    "expected_docs": ["team-data", "org-chart"],
+    "must_contain": ["Maya Rivera"],
+    "must_not_contain": ["Maya Brooks"],
+    "expected_answer": "The Data Team owns the orders database; its engineering manager is Maya Rivera."
+  },
+  {
+    "id": "backup-restore-test-owner",
+    "category": "multi-doc",
+    "question": "Who was asked to schedule the quarterly backup restore test?",
+    "answerable": true,
+    "expected_docs": ["notes-platform-2026-03"],
+    "must_contain": ["Maya Rivera"],
+    "must_not_contain": [],
+    "expected_answer": "Maya Rivera (action from the March 2026 platform meeting notes). The Disaster Recovery Runbook says restores are tested quarterly by the Platform Team."
+  },
+  {
+    "id": "deploy-today",
+    "category": "date",
+    "question": "Can I deploy to production today?",
+    "answerable": true,
+    "expected_docs": ["eng-release-calendar", "eng-deploy-runbook"],
+    "must_contain": ["freeze"],
+    "must_not_contain": [],
+    "expected_answer": "Not normally (today is 2026-11-18): release 2026.22 is on 2026-11-19, so its 72-hour freeze started on 2026-11-16. Exceptions need the on-call manager's approval in #deploys."
+  },
+  {
+    "id": "next-release",
+    "category": "date",
+    "question": "When is the next release and when does its freeze begin?",
+    "answerable": true,
+    "expected_docs": ["eng-release-calendar"],
+    "must_contain": ["2026.22"],
+    "must_not_contain": [],
+    "expected_answer": "Release 2026.22 on 2026-11-19; its freeze began 72 hours before, on 2026-11-16 (today is 2026-11-18)."
+  },
+  {
+    "id": "baby-next-month",
+    "category": "date",
+    "question": "My partner is having a baby next month and I'm the secondary caregiver. How many weeks of paid leave do I get?",
+    "answerable": true,
+    "expected_docs": ["hr-parental-leave-policy", "hr-parental-leave-policy-2027", "notes-allhands-2026-09"],
+    "must_contain": ["12"],
+    "must_not_contain": [],
+    "expected_answer": "12 weeks: a birth in December 2026 falls before 2027-01-01, so the 26-week 2027 revision does not apply yet."
+  },
+  {
+    "id": "holiday-dates",
+    "category": "unanswerable",
+    "question": "What are the exact dates of the company holidays this year?",
+    "answerable": false,
+    "expected_docs": [],
+    "must_contain": [],
+    "must_not_contain": [],
+    "expected_answer": "Not in the handbook. It says there are 11 paid holidays (plus two floating) and that dates are in a Holiday Calendar CSV, which is not part of the handbook."
+  },
+  {
+    "id": "ceo-name",
+    "category": "unanswerable",
+    "question": "Who is the CEO of Northgate Robotics?",
+    "answerable": false,
+    "expected_docs": [],
+    "must_contain": [],
+    "must_not_contain": [],
+    "expected_answer": "Not in the handbook. The org chart lists a CTO (Tyler Anderson) but no CEO."
+  },
+  {
+    "id": "dental-provider",
+    "category": "unanswerable",
+    "question": "Which company provides our dental insurance?",
+    "answerable": false,
+    "expected_docs": [],
+    "must_contain": [],
+    "must_not_contain": [],
+    "expected_answer": "Not in the handbook. The Benefits Overview says dental insurance is offered but names no provider."
+  },
+  {
+    "id": "denver-parking",
+    "category": "unanswerable",
+    "question": "Is there free parking at the Denver office?",
+    "answerable": false,
+    "expected_docs": [],
+    "must_contain": [],
+    "must_not_contain": [],
+    "expected_answer": "Not in the handbook."
+  },
+  {
+    "id": "dogs-in-office",
+    "category": "unanswerable",
+    "question": "Can I bring my dog to the office?",
+    "answerable": false,
+    "expected_docs": [],
+    "must_contain": [],
+    "must_not_contain": [],
+    "expected_answer": "Not in the handbook."
+  },
+  {
+    "id": "anti-harassment-policy",
+    "category": "unanswerable",
+    "question": "What does the Anti-Harassment Policy say about deadlines for reporting?",
+    "answerable": false,
+    "expected_docs": [],
+    "must_contain": [],
+    "must_not_contain": [],
+    "expected_answer": "Not in the handbook. The Grievance Policy refers to an Anti-Harassment Policy, but that document is not included."
+  }
+]
