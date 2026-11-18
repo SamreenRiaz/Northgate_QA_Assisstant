@@ -12,6 +12,7 @@ __pycache__/
 # Generated data - can be rebuilt with the ingest script
 data/processed/
 data/index/
+data/models/
 
 # Local databases
 *.db
