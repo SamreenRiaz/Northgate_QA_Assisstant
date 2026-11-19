@@ -11,6 +11,8 @@ from app.retrieval.models import SearchResult
 
 # "[2]", "[2][3]" and "[2, 3]" all cite passages by number.
 CITATION = re.compile(r"\[(\d+(?:\s*,\s*\d+)*)\]")
+# Some models (gpt-oss) cite in their own style, "【2】" or "【2†L4-L6】"; we rewrite these to "[2]".
+MODEL_CITATION = re.compile(r"【(\d+)(?:†[^】]*)?】")
 
 
 class Retriever(Protocol):
@@ -37,7 +39,8 @@ class Answerer:
 
     def answer(self, question: str) -> Answer:
         results = self._retriever.search(question, k=self._k)
-        text = self._llm.complete(build_messages(question, results, today()))
+        reply = self._llm.complete(build_messages(question, results, today()))
+        text = MODEL_CITATION.sub(r"[\1]", reply)
         return Answer(text=text, citations=cited_passages(text, results))
 
 

@@ -42,6 +42,13 @@ def test_answer_returns_text_and_cited_sources(fake_llm):
     assert [(c.number, c.chunk.chunk_id) for c in answer.citations] == [(1, "leave-v2#1")]
 
 
+def test_model_style_citations_rewritten(fake_llm):
+    fake_llm.reply = "16 days【1】, and $275 per night【2†L4-L6】."
+    answer = Answerer(FakeRetriever(RESULTS), fake_llm).answer("q")
+    assert answer.text == "16 days[1], and $275 per night[2]."
+    assert [c.number for c in answer.citations] == [1, 2]
+
+
 def test_answer_uses_today(fake_llm, monkeypatch):
     monkeypatch.setenv("TODAY", "2026-11-19")
     Answerer(FakeRetriever(RESULTS), fake_llm).answer("q")

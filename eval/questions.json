@@ -275,7 +275,7 @@
     "question": "I booked a $3,200 business trip through VoyageHub. Does it need VP approval?",
     "answerable": true,
     "expected_docs": ["fin-expense-policy", "hr-travel-booking-guide"],
-    "must_contain": ["not"],
+    "must_contain": ["manager"],
     "must_not_contain": [],
     "expected_answer": "No. Travel booked through VoyageHub is pre-approved at booking; it needs only manager sign-off (no VP approval), even though the approval matrix says VP above $2,500 for expense claims."
   },
