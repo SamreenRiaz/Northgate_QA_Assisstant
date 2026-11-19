@@ -29,6 +29,8 @@ LLM_MODEL = os.getenv("LLM_MODEL", "openai/gpt-oss-120b")
 LLM_REASONING_EFFORT = os.getenv("LLM_REASONING_EFFORT", "low")  # empty for models without reasoning
 LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "1024"))  # cap per answer, reasoning included
 
+TOP_K = 5
+
 
 def today() -> date:
     """Today's date, or the fixed TODAY from .env so evaluation runs are repeatable."""

@@ -29,6 +29,23 @@ class FakeEmbedder:
         return [x / length for x in vector]
 
 
+class FakeLLM:
+    """Stand-in for the real LLM: returns a fixed reply and remembers every prompt it got."""
+
+    def __init__(self, reply: str = "The handbook does not cover this.") -> None:
+        self.reply = reply
+        self.calls: list[list[dict]] = []
+
+    def complete(self, messages: list[dict]) -> str:
+        self.calls.append(messages)
+        return self.reply
+
+
 @pytest.fixture
 def fake_embedder():
     return FakeEmbedder()
+
+
+@pytest.fixture
+def fake_llm():
+    return FakeLLM()
