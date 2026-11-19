@@ -2,6 +2,7 @@
 from app.generation.answerer import Answerer, cited_passages
 from app.ingestion.models import Chunk
 from app.retrieval.models import SearchResult
+from tests.fakes import FakeRetriever
 
 
 def make_result(chunk_id, text):
@@ -15,16 +16,6 @@ RESULTS = [
     make_result("travel#4", "Tier 1 hotels: $275 per night."),
     make_result("vpn#0", "At most 2 VPN sessions."),
 ]
-
-
-class FakeRetriever:
-    def __init__(self, results):
-        self.results = results
-        self.asked = None
-
-    def search(self, question, k):
-        self.asked = (question, k)
-        return self.results[:k]
 
 
 def test_answer_uses_retrieved_passages_and_question(fake_llm):

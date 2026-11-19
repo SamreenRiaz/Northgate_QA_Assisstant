@@ -23,6 +23,12 @@ def load_documents(manifest_path: Path = MANIFEST_PATH) -> list[Document]:
     return documents
 
 
+def read_documents(path: Path) -> list[Document]:
+    """Read the Documents written by save_jsonl."""
+    with open(path, encoding="utf-8") as f:
+        return [Document(**json.loads(line)) for line in f]
+
+
 def save_jsonl(items: list, path: Path) -> None:
     """Write dataclass objects to a JSON Lines file (one object per line)."""
     path.parent.mkdir(parents=True, exist_ok=True)

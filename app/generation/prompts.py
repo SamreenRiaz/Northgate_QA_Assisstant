@@ -32,10 +32,15 @@ def build_messages(question: str, results: list[SearchResult], today: date) -> l
 
 def format_passage(number: int, chunk: Chunk, today: date) -> str:
     """'[1] Travel Policy > 4.2 Hotels (effective 2024-06-01)' followed by the passage text."""
-    effective = date.fromisoformat(chunk.metadata["effective_date"])
-    labels = [f"effective {effective.isoformat()}"]
-    if effective > today:
-        labels.append(f"NOT YET IN EFFECT until {effective.isoformat()}")
-    if chunk.metadata.get("category") == "Meeting Notes":
-        labels.append("meeting notes")
+    labels = [f"effective {chunk.metadata['effective_date']}", *source_labels(chunk.metadata, today)]
     return f"[{number}] {chunk.section} ({'; '.join(labels)})\n{chunk.text}"
+
+
+def source_labels(metadata: dict, today: date) -> list[str]:
+    """Warnings about a source, shown to the model and to the user."""
+    labels = []
+    if date.fromisoformat(metadata["effective_date"]) > today:
+        labels.append(f"NOT YET IN EFFECT until {metadata['effective_date']}")
+    if metadata.get("category") == "Meeting Notes":
+        labels.append("meeting notes")
+    return labels
