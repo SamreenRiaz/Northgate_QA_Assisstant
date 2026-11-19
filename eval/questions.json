@@ -275,7 +275,7 @@
     "question": "I booked a $3,200 business trip through VoyageHub. Does it need VP approval?",
     "answerable": true,
     "expected_docs": ["fin-expense-policy", "hr-travel-booking-guide"],
-    "must_contain": ["not"],
+    "must_contain": ["manager"],
     "must_not_contain": [],
     "expected_answer": "No. Travel booked through VoyageHub is pre-approved at booking; it needs only manager sign-off (no VP approval), even though the approval matrix says VP above $2,500 for expense claims."
   },
@@ -467,17 +467,17 @@
     "expected_docs": ["eng-release-calendar", "eng-deploy-runbook"],
     "must_contain": ["freeze"],
     "must_not_contain": [],
-    "expected_answer": "Not normally (today is 2026-11-18): release 2026.22 is on 2026-11-19, so its 72-hour freeze started on 2026-11-16. Exceptions need the on-call manager's approval in #deploys."
+    "expected_answer": "Not normally (today is 2026-11-19): today is release day for 2026.22, and its 72-hour freeze started on 2026-11-16. Exceptions need the on-call manager's approval in #deploys."
   },
   {
-    "id": "next-release",
+    "id": "release-today-and-next",
     "category": "date",
-    "question": "When is the next release and when does its freeze begin?",
+    "question": "Is there a release today, and when is the one after it?",
     "answerable": true,
     "expected_docs": ["eng-release-calendar"],
-    "must_contain": ["2026.22"],
+    "must_contain": ["2026.22", "2026.23"],
     "must_not_contain": [],
-    "expected_answer": "Release 2026.22 on 2026-11-19; its freeze began 72 hours before, on 2026-11-16 (today is 2026-11-18)."
+    "expected_answer": "Yes: release 2026.22 is today (2026-11-19). The next one is 2026.23 on 2026-12-03, with its freeze starting 72 hours before, on 2026-11-30."
   },
   {
     "id": "baby-next-month",

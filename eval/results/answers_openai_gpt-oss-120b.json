@@ -1,0 +1,118 @@
+{
+  "c5a43ca7de9f4e8d334c822a62090ae95dc787fe48867525b4b6062a81d5752f": {
+    "answer": "The handbook does not specify Boston’s city tier, so it does not state the exact maximum nightly rate for that location. It does list the general tier caps: Tier 1 – $275, Tier 2 – $200, Tier 3 – $150 per night【1】.",
+    "seconds": 1.32
+  },
+  "0cb2ed0aaa55659595e7165e5fa65a0ada7da3e34308d9c954c6218169ee77ce": {
+    "answer": "The daily per‑diem for an L3 employee traveling to Chicago (city tier 2) is **$75**【2】.",
+    "seconds": 0.82
+  },
+  "d5439c8c8ac254335e45273026903cc583c2adcf0690d9e82953975e5021020a": {
+    "answer": "An L5 employee traveling to San Francisco (city‑tier 1) receives a per‑diem of **$110** per day【1】.",
+    "seconds": 0.76
+  },
+  "0da71aae3cd19280ad0d68dfee66ac0fc3df4707fad4f254d7f7c7e9d8459b18": {
+    "answer": "Your direct manager can approve conference‑attendance expenses up to **$3,000** [1][2].",
+    "seconds": 1.63
+  },
+  "698b889be2db82b8c59bb47e2220614387a9ccdd6e0970520a1c97eef03e1d6b": {
+    "answer": "The RTO for the payments service is 4 hours【1】.",
+    "seconds": 0.51
+  },
+  "42df059d571096d724a13eb53ca34e3cafcecdb1de85422e5ea5dc8c8004db95": {
+    "answer": "The handbook does not cover a specific acceptable data‑loss amount for the orders database. The only guidance on data loss is the generic definition of RPO in the Glossary, which describes it as “the maximum acceptable amount of data loss measured in time, for example 15 minutes of writes”【2】.",
+    "seconds": 1.18
+  },
+  "2d6305d5ae6e89f1fc257c9e1c634aa6be28f808f49632079da3d647171d230a": {
+    "answer": "Deploy freezes begin **72 hours before each scheduled release**【1】. (The release calendar also lists a 72‑hour freeze for each upcoming release【2】, and the all‑hands notes reiterate the same rule【3】.)",
+    "seconds": 0.83
+  },
+  "5a5c9328bf8b4eeba2aa7ac9bf104a3f93eec64cd28c2ed320a306db94a23513": {
+    "answer": "Full‑time employees accrue 16 days of annual leave each calendar year [1].",
+    "seconds": 0.66
+  },
+  "adb298abb1a9a8166c1426cfefb508155611687aca3c566b09d6199a647d6afc": {
+    "answer": "You have 45 minutes after a full rollout to use the one‑click rollback in the deploy console [1][4].",
+    "seconds": 2.67
+  },
+  "a6b9553fa314ed23c3991a8c933b21a1fa4574d9ded6330c6e3056dc0e3a5b5d": {
+    "answer": "A change must have **2 approving reviews** before it can be merged and deployed to production [1][2].",
+    "seconds": 5.46
+  },
+  "1ec9115caa5148c56de6e9a4e7687dfe334a6bc54d17ea824d717615a36c3efb": {
+    "answer": "Yes. Production deploys run a canary stage that lasts ten minutes before full rollout【1】【4】.",
+    "seconds": 5.5
+  },
+  "a82579ea36c5605157355e699c781e0d0db8777c05c5aae9f7ec66cef2371b97": {
+    "answer": "A secondary caregiver currently receives 12 weeks of fully paid leave [1]. The policy will increase to 26 weeks for births and adoptions on or after 1 January 2027 [2][3].",
+    "seconds": 8.38
+  },
+  "592aadf0ce4092b7ce168d45e53d8cff694745c237a2a929611106cf3856ec2e": {
+    "answer": "Birth parents receive 16 weeks of fully paid leave [1]. The 2027 revision does not change this amount; it will still be 16 weeks when that revision takes effect.",
+    "seconds": 3.2
+  },
+  "a3c6ec50de6dd842a172e50253970f76d312b4237452f2f118446955b9fd77b4": {
+    "answer": "No – because the trip was booked through VoyageHub, it is considered pre‑approved at booking time and only requires your manager’s sign‑off when you file the expense claim [2].",
+    "seconds": 5.25
+  },
+  "c8536e1ab05e668985054f418c90118cefa1b986e744a0385cbfadfdddc2b792": {
+    "answer": "The handbook does not cover this. The hotel caps are defined by city tier [1], and the per‑diem amounts are listed by grade and city tier in the Per‑Diem Tables [3][4]; however, Denver’s tier is not provided in any of the passages. You’ll need to know Denver’s city tier to determine the applicable hotel limit and per‑diem.",
+    "seconds": 11.56
+  },
+  "41ae6b37430d11b23929a5afec64f147983233d07796d3a0257b8e55e98b7c5c": {
+    "answer": "The approval for a laptop replacement comes from your team’s engineering manager — for the Platform team that is **Engineering Manager Maya Brooks**【1†L4-L6】【3†L1-L3】.",
+    "seconds": 3.18
+  },
+  "8be8aaf66525250c862b0dac7bad14b047bb3da36804d344f72a1bfd13ab2628": {
+    "answer": "You need sign‑off from the **Security Lead** for production database access【1】.",
+    "seconds": 9.04
+  },
+  "7c3b2298b21d12760099945868d71835d579c6442744d7acecaec222fa9e2474": {
+    "answer": "Service credits for outages are approved by the Head of Product (and then processed by Finance)【1】.",
+    "seconds": 14.57
+  },
+  "49f487f1d89eecb54f80b1d39f55d9cec04af563b5187f7b7f457b3ba63c6c44": {
+    "answer": "The orders database is owned by the Data Team, whose engineering manager is **Maya Rivera**【1】.",
+    "seconds": 1.36
+  },
+  "93950f0272b61c5da4d67197313bd69584f314f2b10f61fe20c41253d24f934a": {
+    "answer": "Maya Rivera was asked to schedule the quarterly backup restore test【1】.",
+    "seconds": 4.94
+  },
+  "88306da84c73e2df234c5a996f92ebfa8ad730c69df60714ca85a06764b88e8b": {
+    "answer": "You cannot deploy to production today because deploys are allowed only on weekdays between 10:00 and 15:00 CT, and today (2026‑11‑19) is a Saturday [1].",
+    "seconds": 7.26
+  },
+  "cd8096bedc13e55b9ea1a4d01edf40c718b377309ed2db9357c70ff276875f55": {
+    "answer": "There is no release today because releases are scheduled only on Thursdays [2]. The next release will be on the upcoming Thursday, 2026‑11‑23.",
+    "seconds": 4.02
+  },
+  "d7b0cb1e9744797979bcf8516daafb8cc66256a676e99b98474618d30d884712": {
+    "answer": "You are entitled to **12 weeks of fully paid secondary‑caregiver leave** for the upcoming birth [1]. The increase to 26 weeks will apply only to births on or after 2027‑01‑01, as noted in the June 20 2026 review meeting notes [2].",
+    "seconds": 7.61
+  },
+  "28899b0604a5804c0fcdcebe561562e9b3681fa0ab230ddc5272f86fd4e970f0": {
+    "answer": "The handbook does not cover this. It notes that the list of 11 paid holidays is maintained in the Holiday Calendar CSV, but the specific dates are not provided in the passages.",
+    "seconds": 8.42
+  },
+  "69af64c04e7f6f5354db1a5c7ae0f27aaf71a2589a65ae692e390428c8823848": {
+    "answer": "The handbook does not cover this. The closest related information provided includes team leadership (e.g., Engineering Manager Aisha Ali) but no mention of the company’s CEO.",
+    "seconds": 0.42
+  },
+  "e626b06e87d00369b0cd49a9fbeef04a65be0e271d9dbc146c312bd6dd3879fb": {
+    "answer": "The handbook does not cover this. The Benefits Overview confirms that dental insurance is provided to employees and dependents, but it does not name the insurance provider.",
+    "seconds": 12.68
+  },
+  "d9a727af0e7591bbfa71c0fc3020a7b3b6cae3d59b9c4dafbf21922d9fde308f": {
+    "answer": "The handbook does not cover this. The only office‑specific details provided are the locations, team assignments, hours of operation, and visitor policies for the Denver office【1】.",
+    "seconds": 3.72
+  },
+  "95a20c32656d95c9a0c75759ee004317d25478e9b8a3fcc1eb51f61e482c6fb9": {
+    "answer": "The handbook does not cover this. (No passage provides guidance on bringing pets to the office.)",
+    "seconds": 6.13
+  },
+  "93cdf472c3328cca773cbf8c89ea3d4b18852f1a84bb04594221893af2e7cd16": {
+    "answer": "The handbook does not cover this. The only related reference is in the Grievance Policy, which notes that harassment complaints are handled by People Operations and Legal under the Anti‑Harassment Policy, but it does not specify any reporting deadlines.",
+    "seconds": 0.85
+  }
+}
