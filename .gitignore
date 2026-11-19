@@ -13,6 +13,7 @@ __pycache__/
 data/processed/
 data/index/
 data/models/
+data/logs/
 
 # Local databases
 *.db
